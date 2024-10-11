@@ -37,9 +37,11 @@ Para ello necesitaremos los siguientes recursos ytendremos el siguiente escenari
 Para poder instalar y configurar el servidor de DHCP debemos preparar nuestro entorno para cuando tengamos que empezar a trabajar sea lo más comodo posible. Por eso debemos instalar las máquinas indicadas en el apartado de recursos y configurarlas tal y como indica el apartado de escanario.
 
 Configuracon del Debian
+
 ![ConfiguracionDebian](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/conf-debian.PNG)
 
 Configuración del PfSense
+
 ![ConfiguracionPfSense](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/ipPfSense.PNG)
 
 Las configuraciones de Windows y Ubuntu son estaticas, ya que son clientes DHCP.
@@ -49,23 +51,29 @@ Debemos acordarnos de desactivar el DHCP de router PfSense para poder introducir
 Por último debemos comprobar que la máquina de Debian navega por internet, ya sea con un ping a la ip 8.8.8.8 o un ping a <www.google.es>.
 
 PingDebian-PfSense
+
 ![PingDebian-PfSense](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/ping10.0.206.2-PfSense.PNG)
 
 PingPfSense-Debian
+
 ![PingPfSense-Debian](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/ping10.0.206.0-debian.PNG)
 
 PingDebian-Google
+
 ![PingDebian-Google](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/pingDebian-8.8.8.8.PNG)
 
 También debemos cambiar el nombre del promt para poder identificar más facilmente nuestro trabajo.
 
 Cambio Nombre Windows
+
 ![CambioWindows](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/hostnamewindows.PNG)
 
 Cambio Nombre Debian
+
 ![CambioDebian](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/hostnamedebian.PNG)
 
 Cambio Nombre Ubuntu
+
 ![CambioUbuntu](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/hostnameubuntu.PNG)
 
 # Enunciado
@@ -75,11 +83,13 @@ Para comenzar, debemos empezar por la configuración del servidor DHCP.
 Para ello debemos instalar el servidor en la máquina correspondiente, en este caso lo instalaremos en la máquina de Debian.
 
 Instalacion del DHCP en Debian
+
 ![InstalacionDHCP](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/Instalaciondhcpdebian.PNG)
 
 Después de instalarlo debemos modificar el fichero dhcpf.conf, aunque antes debemos hacer una copia de seguridad por si acaso.
 
 Copia fichero
+
 ![Copiafichero](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/copia-seguridad-dhcpd.conf.PNG)
 
 Mofificación fichero
