@@ -30,17 +30,17 @@ Para ello necesitaremos los siguientes recursos ytendremos el siguiente escenari
 - En esta práctica vamos a instalar y configurar un servidor DHCP en Debian con dos clientes, uno Windows y otro Linux.
 - Las tres máquinas, el servidor Debian, el cliente con Windows y el cliente Ubuntu estarán en la misma subred privada interna SRI2XX, con dirección de red 10.0.XX.0/24,donde XX son los dos últimos dígitos de tu nombre de usuario del dominio. Las máquinas estarán conectadas a Internet a través de un router pfSense.
 
-    ![ReferenciaEscenario](img\imagenreferencia.png)
+    ![ReferenciaEscenario](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/imagenreferencia.PNG)
 
 ## Preparacion Del Entorno
 
 Para poder instalar y configurar el servidor de DHCP debemos preparar nuestro entorno para cuando tengamos que empezar a trabajar sea lo más comodo posible. Por eso debemos instalar las máquinas indicadas en el apartado de recursos y configurarlas tal y como indica el apartado de escanario.
 
 Configuracon del Debian
-![ConfiguracionDebian](img\conf-Debian.png)
+![ConfiguracionDebian](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/conf-debian.PNG)
 
 Configuración del PfSense
-![ConfiguracionPfSense](img\IpPfSense.png)
+![ConfiguracionPfSense](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/ipPfSense.PNG)
 
 Las configuraciones de Windows y Ubuntu son estaticas, ya que son clientes DHCP.
 
@@ -49,24 +49,24 @@ Debemos acordarnos de desactivar el DHCP de router PfSense para poder introducir
 Por último debemos comprobar que la máquina de Debian navega por internet, ya sea con un ping a la ip 8.8.8.8 o un ping a <www.google.es>.
 
 PingDebian-PfSense
-![PingDebian-PfSense](img\ping10.0.206.2-PfSense.png)
+![PingDebian-PfSense](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/ping10.0.206.2-PfSense.PNG)
 
 PingPfSense-Debian
-![PingPfSense-Debian](img\ping10.0.206.0-debian.png)
+![PingPfSense-Debian](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/ping10.0.206.0-debian.PNG)
 
 PingDebian-Google
-![PingDebian-Google](img\pingDebian-8.8.8.8.png)
+![PingDebian-Google](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/pingDebian-8.8.8.8.PNG)
 
 También debemos cambiar el nombre del promt para poder identificar más facilmente nuestro trabajo.
 
 Cambio Nombre Windows
-![CambioWindows](img\hostnamewindows.png)
+![CambioWindows](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/hostnamewindows.PNG)
 
 Cambio Nombre Debian
-![CambioDebian](img\hostnamedebian.png)
+![CambioDebian](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/hostnamedebian.PNG)
 
 Cambio Nombre Ubuntu
-![CambioUbuntu](img\hostnameubuntu.png)
+![CambioUbuntu](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/hostnameubuntu.PNG)
 
 # Enunciado
 
@@ -75,12 +75,12 @@ Para comenzar, debemos empezar por la configuración del servidor DHCP.
 Para ello debemos instalar el servidor en la máquina correspondiente, en este caso lo instalaremos en la máquina de Debian.
 
 Instalacion del DHCP en Debian
-![InstalacionDHCP](img\Instalaciondhcpdebian.png)
+![InstalacionDHCP](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/Instalaciondhcpdebian.PNG)
 
 Después de instalarlo debemos modificar el fichero dhcpf.conf, aunque antes debemos hacer una copia de seguridad por si acaso.
 
 Copia fichero
-![Copiafichero](img\copia-seguridad-dhcpd.conf.png)
+![Copiafichero](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/copia-seguridad-dhcpd.conf.PNG)
 
 Mofificación fichero
 
@@ -95,17 +95,17 @@ Mofificación fichero
   - Nunca será superior a 30 días.
   - Nunca será inferior a 1 semana.
 
-![Modificacion](img\dhcpd.conf.png)
+![Modificacion](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/dhcpd.conf.PNG)
 
 También podemos reservar una IP, en este caso reservamos la Ip 10.0.206.60 para el cliente de Ubuntu.
 
 Reserva de la Ip 10.0.206.60
 
-![Reserva](img\reserva.60ubuntu.png)
+![Reserva](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/reserva.60ubuntu.PNG)
 
 Para finalizar debemos reiniciar el servicio.
 
-![ReinicioServicio](img\restart-isc.png)
+![ReinicioServicio](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/restart-isc.PNG)
 
 Una vez terminado la instalación y la configuración del servidor DHCP en Debian, debemos dirigir nuestra atención a los clientes.
 
@@ -113,23 +113,23 @@ Primero miramos que los clientes tienen la configuración de red en modo DHCP.
 
 Ubuntu
 
-![ClienteDHCPUbuntu](img\clientedhcpubuntu.png)
+![ClienteDHCPUbuntu](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/clientedhcpubuntu.PNG)
 
 Windows
 
-![ClienteDHCPWindows](img\clientedhcpwindows.png)
+![ClienteDHCPWindows](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/clientedhcpwindows.PNG)
 
 Una vez configurado el servidor DHCP deberian haberse administrado ip 
 
 Ubuntu
 
-![ClienteDHCPUbuntu](img\ip-dhcp-ubuntu.png)
+![ClienteDHCPUbuntu](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/ip-dhcp-ubuntu.PNG)
 
 Como indicamos en la reserva del servidor DHCP el cliente de Ubuntu tiene la IP 10.0.206.60.
 
 Windows
 
-![ClienteDHCPUbuntu](img\ip-dhcp-windows.png)
+![ClienteDHCPUbuntu](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/ip-dhcp-windows.PNG)
 
 Para comprobar que están bien configurados debemos hacer ping entre todos ellos.
 
@@ -137,30 +137,30 @@ Ubuntu.
 
 Ping Ubuntu-PfSense
 
-![PingUbuntu-PfSense](img\pingubuntu-PfSense.png)
+![PingUbuntu-PfSense](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/pingubuntu-PfSense.PNG)
 
 Ping Ubuntu-Debian
 
-![PingUbuntu-Debian](img\pingubuntu-Debian.png)
+![PingUbuntu-Debian](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/pingubuntu-Debian.PNG)
 
 Ping Ubuntu-Google
 
-![PingUbuntu-Google](img\pingubuntu-Google.png)
+![PingUbuntu-Google](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/pingubuntu-google.PNG)
 
 Windows
 
 Ping Windows-PfSense
 
-![PingWindows-PfSense](img\pingwindows-PfSense.png)
+![PingWindows-PfSense](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/pingwindows-PfSense.PNG)
 
 Ping Windows-Debian
 
-![PingWindows-Debian](img\pingwindows-Debian.png)
+![PingWindows-Debian](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/pingwindows-Debian.PNG)
 
 Ping Windows-Google
 
-![PingWindows-Google](img\pingwindows-Google.png)
+![PingWindows-Google](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/pingwindows-google.PNG)
 
 Para terminar hay que comprobar la funcionalidad del servicio con el comando "journalctl".
 
-![Comprobacion](img\journalctl.png)
+![Comprobacion](https://github.com/ana-deb739/SRI-Practica2/blob/master/Practica-2/img/journalctl.PNG)
